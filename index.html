@@ -2,97 +2,7 @@
 <html lang="cn">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1, minimal-ui">
-<meta itemprop="name" content="ChatGPT 导航网站"/>
-<meta id="image" itemprop="image" content="https://www.example.com/logo.png" />
-<meta name="description" itemprop="description" content="一个专注于ChatGPT资源和导航的网站。" />
-<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0;" name="viewport" />
-<title>ChatGPT 导航网站</title>
-<link rel="stylesheet" href="css/bootstrap.min.css">
-<link rel="stylesheet" href="css/font-awesome.min.css">
-<link rel="stylesheet" href="css/animate.css">
-<link rel="stylesheet" href="css/templatemo_style.css">
-<link rel="shortcut icon" type="image/x-icon" href="https://www.example.com/logo.png" media="screen" />
-
-<script src="https://cdn.jsdelivr.net/npm/bluebird@3/js/browser/bluebird.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/whatwg-fetch@2.0.3/fetch.min.js"></script>
-<script src="https://cdn.staticfile.org/jquery/2.1.1/jquery.min.js"></script>
-<script src="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
-
-<style>
-    body, html {
-        height: 100%;
-        margin: 0;
-    }
-    .site-footer {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        height: 100vh; /* 使footer占满整个视窗高度 */
-    }
-    .social {
-        list-style: none;
-        padding: 0;
-        display: flex;
-        gap: 20px;
-    }
-    .social li {
-        display: inline;
-    }
-    .social a {
-        text-decoration: none;
-        color: inherit;
-        background-color: #C0C0C0; /* 金属银色 */
-        padding: 10px 20px; /* 添加按钮的填充 */
-        border-radius: 5px; /* 增加圆角，如果需要的话 */
-    }
-    .social a:hover {
-        background-color: #A9A9A9; /* 提供悬停效果 */
-    }
-    .main-footer, .copyright {
-        border: none; /* 去掉那两条线 */
-    }
-</style>
-</head>
-<body oncontextmenu="return false" onselectstart="return false" ondragstart="return false">
-<footer class="site-footer container text-center">
-    <div class="main-footer">
-        <ul class="social">
-            <li><a href="https://www.chatgpt4x.cn"><h4>ChatGPT对话</h4></a></li>
-            <li><a href="https://www.citrons.cn/"><h4>ChatGPT画图</h4></a></li>
-            <li><a href="https://weibo.com/u/6620261949"><h4>ChatGPT文档分析</h4></a></li>
-        </ul>
-    </div>
-    <div class="copyright">
-        <p>Copyright &copy; 2019&nbsp;&nbsp;Company&nbsp;&nbsp;<a href="https://www.chatgpt5x.com">xxxx</a></p>
-    </div>
-</footer>
-
-<script>
-  fetch('https://v1.hitokoto.cn')
-    .then(function (res){
-      return res.json();
-    })
-    .then(function (data) {
-      var hitokoto = document.getElementById('hitokoto');
-      hitokoto.innerText = data.hitokoto;
-    })
-    .catch(function (err) {
-      console.error(err);
-    })
-</script>
-
-</body>
-</html><!DOCTYPE html>
-<html lang="cn">
-<head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1, minimal-ui">
-<meta itemprop="name" content="ChatGPT 导航网站"/>
-<meta id="image" itemprop="image" content="https://www.example.com/logo.png" />
-<meta name="description" itemprop="description" content="一个专注于ChatGPT资源和导航的网站。" />
-<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0;" name="viewport" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <title>ChatGPT 导航网站</title>
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
@@ -104,58 +14,55 @@
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
 
 <style>
-    body, html {
-        height: 100%;
-        margin: 0;
-        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-        background-color: #000; /* 设置背景为黑色 */
-        color: #fff; /* 设置默认文本颜色为白色 */
-    }
-    .site-footer {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        height: 100vh; 
-        text-align: center;
-    }
-    .social {
-        list-style: none;
-        padding: 0;
-        margin: 0 0 20px;
-        display: flex;
-        justify-content: center;
-        gap: 30px; /* 增大按钮间距 */
-    }
-    .social li {
-        display: inline;
-    }
-    .social a {
-        text-decoration: none;
-        color: white; 
-        background: linear-gradient(145deg, #555, #333); /* 更细腻的渐变 */
-        padding: 15px 25px; /* 来增加按钮大小 */
-        border-radius: 8px;
-        box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.6); /* 更柔和的阴影 */
-        transition: all 0.3s ease; 
-        font-size: 20px;
-        font-weight: 600;
-    }
-    .social a:hover {
-        background: linear-gradient(145deg, #333, #555); /* 修改悬停效果 */
-        box-shadow: 0px 4px 6px rgba(255, 255, 255, 0.4); /* 修改悬停时的阴影 */
-    }
-    .main-footer, .copyright {
-        border: none;
-    }
-    h4 {
-        margin: 0;
-    }
-    .copyright p {
-        margin: 0;
-        font-size: 14px;
-        color: #ccc;
-    }
+body, html {
+    height: 100%;
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #000; /* 设置背景为黑色 */
+    color: #fff; /* 设置默认文本颜色为白色 */
+}
+
+.site-footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh; 
+    text-align: center;
+}
+
+.social {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 20px;
+    display: flex;
+    justify-content: center;
+    gap: 30px; /* 增大按钮间距 */
+}
+
+.social li {
+    display: inline-block; /* 更改为inline-block以支持居中对齐 */
+}
+
+.social a {
+    text-decoration: none;
+    display: inline-block;
+    width: 200px; /* 规定按钮宽度 */
+    font-size: 16px; /* 字体大小 */
+    color: white;
+    background: linear-gradient(145deg, #555, #333);
+    padding: 10px 0; /* 垂直内边距，宽度通过设置width规定 */
+    border-radius: 8px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.6);
+    transition: all 0.3s ease;
+    text-align: center; /* 确保文字居中 */
+}
+
+.social a:hover {
+    background: linear-gradient(145deg, #333, #555);
+    box-shadow: 0px 4px 6px rgba(255, 255, 255, 0.4);
+}
+
 </style>
 </head>
 <body oncontextmenu="return false" onselectstart="return false" ondragstart="return false">
@@ -166,9 +73,6 @@
             <li><a href="https://www.citrons.cn/"><h4>ChatGPT画图</h4></a></li>
             <li><a href="https://weibo.com/u/6620261949"><h4>ChatGPT文档分析</h4></a></li>
         </ul>
-    </div>
-    <div class="copyright">
-        <p>Copyright &copy; 2019&nbsp;&nbsp;Company&nbsp;&nbsp;<a href="https://www.chatgpt5x.com">xxxx</a></p>
     </div>
 </footer>
 </body>
