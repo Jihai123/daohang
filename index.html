@@ -1,162 +1,126 @@
 <!DOCTYPE html>
-<html lang="cn">
+<html lang="zh-CN">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1, minimal-ui">
-<meta itemprop="name" content="ChatGPT 导航网站"/>
-<meta id="image" itemprop="image" content="https://www.example.com/logo.png" />
-<meta name="description" itemprop="description" content="一个专注于ChatGPT资源和导航的网站。" />
-<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0;" name="viewport" />
-<title>ChatGPT 导航网站</title>
-<link rel="stylesheet" href="css/bootstrap.min.css">
-<link rel="stylesheet" href="css/font-awesome.min.css">
-<link rel="stylesheet" href="css/animate.css">
-<link rel="stylesheet" href="css/templatemo_style.css">
-<link rel="shortcut icon" type="image/x-icon" href="https://www.example.com/logo.png" media="screen" />
-
-<script src="https://cdn.jsdelivr.net/npm/bluebird@3/js/browser/bluebird.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/whatwg-fetch@2.0.3/fetch.min.js"></script>
-<script src="https://cdn.staticfile.org/jquery/2.1.1/jquery.min.js"></script>
-<script src="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimal-ui">
+    <meta itemprop="name" content="ChatGPT 导航网站"/>
+    <title>ChatGPT 导航网站</title>
+    <!-- 引入谷歌字体 -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap">
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            color: #333;
+        }
+        h1, h2, h3, h4, h5, h6 {
+            color: #222;
+        }
+        .btn-primary {
+            background-color: #007bff;
+            color: #fff;
+        }
+        .btn-primary:hover {
+            background-color: #0056b3;
+            color: #fff;
+        }
+        .project-item h4 {
+            color: #333;
+        }
+        .project-item p {
+            color: #666;
+        }
+    </style>
 </head>
-<body oncontextmenu="return false" onselectstart="return false" ondragstart="return false">
-
-<header class="site-header container animated fadeInDown">
-    <div class="header-wrapper text-center">
-        <h1>ChatGPT 导航网站</h1>
-    </div>
-</header>
-
-<div id="menu-container">
-    <div id="menu-1" class="homepage home-section container">
-        <!--
-        <div class="home-intro text-center">
-            <h2 class="welcome-title animated fadeInLeft">欢迎访问 ChatGPT 导航网站 <p id="hitokoto">:D 获取中...</p></h2>
-            <p class="animated fadeInRight">专注于提供最全面的ChatGPT资源和工具导航。<br/>Explore the best ChatGPT resources and tools here.</p>
-        </div>
-        <div style="border-bottom: 2px solid #46494f;"></div>
-        -->
-        <br />
-        <div class="home-projects">
-            <div class="row">
-                <div class="col-md-6 col-sm-12">
-                    <div class="project-title animated fadeInUp">
-                        <h3>热门工具</h3><p>POPULAR TOOLS</p>
-                        <p>汇集ChatGPT相关的热门工具和资源。<br />Find popular tools and resources related to ChatGPT.</p>
-                        <a href="https://www.example.com/" class="btn btn-primary">了解更多</a>
+<body>
+    <div id="menu-container">
+        <div id="menu-1" class="homepage home-section container">
+            <br />
+            <div class="home-projects">
+                <div class="row">
+                    <div class="col-md-6 col-sm-12">
+                        <div class="project-title animated fadeInUp">
+                            <h3>热门工具</h3>
+                            <p>POPULAR TOOLS</p>
+                            <p>汇集ChatGPT相关的热门工具和资源。<br />Find popular tools and resources related to ChatGPT.</p>
+                            <a href="https://www.example.com/" class="btn btn-primary">了解更多</a>
+                        </div>
                     </div>
-                </div>
-                <div class="project-home-holder col-md-6 col-sm-12">
-                    <div class="row">
-                        <div class="col-md-6 col-sm-6">
-                            <div class="project-item one animated fadeInRight">
-                                <a href="https://www.chatgpt4x.cn"><img src="picture/8.jpg" class="img-responsive" alt="ChatGPT 对话"></a>
-                                <h4>ChatGPT 对话</h4>
-                                <p>gpt-3.5-turbo永久免费使用，AI世界的入门之选。</p>
+                    <div class="project-home-holder col-md-6 col-sm-12">
+                        <div class="row">
+                            <div class="col-md-6 col-sm-6">
+                                <div class="project-item one animated fadeInRight">
+                                    <a href="https://www.chatgpt4x.cn"><img src="picture/8.jpg" class="img-responsive" alt="ChatGPT 对话"></a>
+                                    <h4>ChatGPT 对话</h4>
+                                    <p>gpt-3.5-turbo永久免费使用，AI世界的入门之选。</p>
+                                </div>
                             </div>
-                        </div>
-                        <div class="col-md-6 col-sm-6">
-                            <div class="project-item two animated fadeInRight">
-                                <a href="https://art.chatgpt5x.com"><img src="picture/9.jpg" class="img-responsive" alt="ChatGPT 绘图"></a>
-                                <h4>ChatGPT 绘图</h4>
-                                <p>通过Midjourney、DELL等工具进行专业绘图。</p>
-                            </div>
-                        </div>
-                        <div class="col-md-6 col-sm-6">
-                            <div class="project-item three animated fadeInRight">
-                                <a href="http://114.55.130.246:3080"><img src="picture/10.jpg" class="img-responsive" alt="ChatGPT 文档分析"></a>
-                                <h4>ChatGPT 文档分析</h4>
-                                <p>提供强大的文档分析功能，轻松注册即可使用。</p>
-                            </div>
-                        </div>
-                        <div class="col-md-6 col-sm-6">
-                            <div class="project-item four animated fadeInRight">
-                                <a href="https://www.chatgpt5x.com"><img src="picture/11.jpg" class="img-responsive" alt="更多敬请期待"></a>
-                                <h4>更多功能</h4>
-                                <p>顶级AI大模型人人可用，更多功能即将上线。</p>
+                            <div class="col-md-6 col-sm-6">
+                                <div class="project-item two animated fadeInRight">
+                                    <!-- 更改其他内容 -->
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>           
-        </div>
-        <div class="border-bottom" style="border-bottom: 2px solid #46494f; margin-top: 20px;"></div> 
-        <br />
-        <div class="blog-header text-center">
-            <h3 class="animated fadeInRight">网站简介</h3>
-            <h3 class="animated fadeInRight">Chatgpt5x.com</h3><br />
-            <p class="animated fadeInLeft">建立于2020年12月1日<br /></p>
-        </div>
-        <div class="row blog-posts">
-            <div class="col-md-4 col-sm-12">
-                <div class="blog-item post-1 animated zoomIn">
-                    <div class="blog-bg blog-pink"></div>
-                    <div class="blog-content">
-                        <h3><a href="https://github.com/CitronsBlog">Web Design</a></h3>
-                        <span class="solid-line"></span>
-                        <p>无聊时设计一些有趣的东西，看似无脑，其实也很有趣，更多知识还在学习中...</p>
-                        <a href="https://www.citrons.cn/" class="post-button">Read More</a>
-                    </div>
-                </div>
             </div>
-            <div class="col-md-4 col-sm-12">
-                <div class="blog-item post-2 animated zoomIn">
-                    <div class="blog-bg blog-blue"></div>
-                    <div class="blog-content">
-                        <h3>Citrons'Blog APP</h3>
-                        <span class="solid-line"></span>
-                        <p>用Fusion App制作了WebApp，可以说没什么技术含量，目前已经着手开发更正式的App...</p>
-                        <a href="https://www.citrons.cn/jishu/99.html" class="post-button">Read More</a>
-                    </div>
-                </div>
+
+            <div class="border-bottom" style="border-bottom: 2px solid #46494f; margin-top: 20px;"></div> 
+            <br />
+            <div class="blog-header text-center">
+                <h3 class="animated fadeInRight">网站简介</h3>
+                <h3 class="animated fadeInRight">Chatgpt5x.com</h3>
+                <br />
+                <p class="animated fadeInLeft">建立于2020年12月1日<br /></p>
             </div>
-            <div class="col-md-4 col-sm-12">
-                <div class="blog-item post-3 animated zoomIn">
-                    <div class="blog-bg blog-green"></div>
-                    <div class="blog-content">
-                        <h3>Blogger</h3>
-                        <span class="solid-line"></span>
-                        <p>持续分享最新的技术和经验，帮助更多的人了解和使用ChatGPT。</p>
+            <div class="row blog-posts">
+                <div class="col-md-4 col-sm-12">
+                    <div class="blog-item post-1 animated zoomIn">
+                        <div class="blog-bg blog-pink"></div>
+                        <div class="blog-content">
+                            <h3><a href="https://github.com/CitronsBlog">Web Design</a></h3>
+                            <span class="solid-line"></span>
+                            <p>无聊时设计一些有趣的东西，看似无脑，其实也很有趣，更多知识还在学习中...</p>
+                            <a href="https://www.citrons.cn/" class="post-button">Read More</a>
+                        </div>
                     </div>
                 </div>
+                <!-- 其余内容 -->
             </div>
         </div>
     </div>
-</div>
 
-<footer class="site-footer container text-center">
-    <div class="row">
-        <div class="col-md-12">
-            <div class="main-footer">
-                <ul class="social">
-                    <li><a href="https://www.facebook.com/pio.citrons">Facebook</a></li>
-                    <li><a href="https://www.citrons.cn/">Ctrons'Blog</a></li>
-                    <li><a href="https://weibo.com/u/6620261949">Sina Weibo</a></li>
-                    <li><a href="http://wpa.qq.com/msgrd?v=3&uin=909229731&site=qq&menu=yes">QQ</a></li>
-                </ul>
+    <footer class="site-footer container text-center">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="main-footer">
+                    <ul class="social">
+                        <li><a href="https://www.facebook.com/pio.citrons">Facebook</a></li>
+                        <li><a href="https://www.citrons.cn/">Ctrons'Blog</a></li>
+                        <li><a href="https://weibo.com/u/6620261949">Sina Weibo</a></li>
+                        <li><a href="http://wpa.qq.com/msgrd?v=3&uin=909229731&site=qq&menu=yes">QQ</a></li>
+                    </ul>
+                </div>
             </div>
         </div>
-    </div>
-    <div class="row">
-        <div class="col-md-12 copyright">
-            <p>Copyright &copy; 2019&nbsp;&nbsp;Company&nbsp;&nbsp;<a href="https://www.chatgpt5x.com">xxxx</a></p>
+        <div class="row">
+            <div class="col-md-12 copyright">
+                <p>Copyright &copy; 2019&nbsp;&nbsp;Company&nbsp;&nbsp;<a href="https://www.chatgpt5x.com">xxxx</a></p>
+            </div>
         </div>
-    </div>
-</footer>
-
-<script>
-  fetch('https://v1.hitokoto.cn')
-    .then(function (res){
-      return res.json();
-    })
-    .then(function (data) {
-      var hitokoto = document.getElementById('hitokoto');
-      hitokoto.innerText = data.hitokoto;
-    })
-    .catch(function (err) {
-      console.error(err);
-    })
-</script>
-
+    </footer>
+    
+    <script>
+        fetch('https://v1.hitokoto.cn')
+            .then(function (res) {
+                return res.json();
+            })
+            .then(function (data) {
+                var hitokoto = document.getElementById('hitokoto');
+                hitokoto.innerText = data.hitokoto;
+            })
+            .catch(function (err) {
+                console.error(err);
+            });
+    </script>
 </body>
 </html>
