@@ -38,7 +38,8 @@
         padding: 0;
         margin: 0 0 20px;
         display: flex;
-        gap: 20px;
+        justify-content: center;
+        gap: 30px; /* 增大按钮间距 */
     }
     .social li {
         display: inline;
@@ -46,28 +47,28 @@
     .social a {
         text-decoration: none;
         color: white; 
-        background: linear-gradient(145deg, #444, #222); /* 深颜色渐变 */
-        padding: 15px 25px; /* 调整填充，使按钮更大 */
-        border-radius: 8px; /* 增加圆角 */
-        box-shadow: 4px 4px 8px #111, -4px -4px 8px #555; 
+        background: linear-gradient(145deg, #555, #333); /* 更细腻的渐变 */
+        padding: 15px 25px; /* 来增加按钮大小 */
+        border-radius: 8px;
+        box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.6); /* 更柔和的阴影 */
         transition: all 0.3s ease; 
-        font-size: 20px; /* 调整字体大小 */
+        font-size: 20px;
         font-weight: 600;
     }
     .social a:hover {
-        background: linear-gradient(145deg, #222, #444); /* 修改悬停时的渐变背景 */
-        box-shadow: 2px 2px 4px #111, -2px -2px 4px #555; 
+        background: linear-gradient(145deg, #333, #555); /* 修改悬停效果 */
+        box-shadow: 0px 4px 6px rgba(255, 255, 255, 0.4); /* 修改悬停时的阴影 */
     }
     .main-footer, .copyright {
         border: none;
+    }
+    h4 {
+        margin: 0;
     }
     .copyright p {
         margin: 0;
         font-size: 14px;
         color: #ccc;
-    }
-    h4 {
-        margin: 0;
     }
 </style>
 </head>
@@ -84,24 +85,5 @@
         <p>Copyright &copy; 2019&nbsp;&nbsp;Company&nbsp;&nbsp;<a href="https://www.chatgpt5x.com">xxxx</a></p>
     </div>
 </footer>
-
-<script>
-  fetch('https://v1.hitokoto.cn')
-    .then(function (res){
-      return res.json();
-    })
-    .then(function (data) {
-      var hitokoto = document.createElement('p');
-      hitokoto.innerText = data.hitokoto;
-      hitokoto.style.color = '#ccc';
-      hitokoto.style.fontSize = '16px';
-      hitokoto.style.marginTop = '20px';
-      document.querySelector('.site-footer').appendChild(hitokoto);
-    })
-    .catch(function (err) {
-      console.error(err);
-    })
-</script>
-
 </body>
 </html>
