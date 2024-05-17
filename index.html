@@ -22,6 +22,8 @@
         height: 100%;
         margin: 0;
         font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        background-color: #000; /* 设置背景为黑色 */
+        color: #fff; /* 设置默认文本颜色为白色 */
     }
     .site-footer {
         display: flex;
@@ -29,8 +31,6 @@
         align-items: center;
         justify-content: center;
         height: 100vh; 
-        background: #f7f7f7;
-        padding: 20px;
         text-align: center;
     }
     .social {
@@ -46,17 +46,17 @@
     .social a {
         text-decoration: none;
         color: white; 
-        background: linear-gradient(145deg, #e6e6e6, #ccc); 
-        padding: 10px 20px; 
-        border-radius: 5px;
-        box-shadow: 4px 4px 8px #aaa, -4px -4px 8px #fff; 
+        background: linear-gradient(145deg, #444, #222); /* 深颜色渐变 */
+        padding: 15px 25px; /* 调整填充，使按钮更大 */
+        border-radius: 8px; /* 增加圆角 */
+        box-shadow: 4px 4px 8px #111, -4px -4px 8px #555; 
         transition: all 0.3s ease; 
-        font-size: 18px;
+        font-size: 20px; /* 调整字体大小 */
         font-weight: 600;
     }
     .social a:hover {
-        background: linear-gradient(145deg, #ccc, #e6e6e6); 
-        box-shadow: 2px 2px 4px #aaa, -2px -2px 4px #fff; 
+        background: linear-gradient(145deg, #222, #444); /* 修改悬停时的渐变背景 */
+        box-shadow: 2px 2px 4px #111, -2px -2px 4px #555; 
     }
     .main-footer, .copyright {
         border: none;
@@ -64,7 +64,7 @@
     .copyright p {
         margin: 0;
         font-size: 14px;
-        color: #666;
+        color: #ccc;
     }
     h4 {
         margin: 0;
@@ -93,8 +93,8 @@
     .then(function (data) {
       var hitokoto = document.createElement('p');
       hitokoto.innerText = data.hitokoto;
-      hitokoto.style.color = '#999';
-      hitokoto.style.fontSize = '14px';
+      hitokoto.style.color = '#ccc';
+      hitokoto.style.fontSize = '16px';
       hitokoto.style.marginTop = '20px';
       document.querySelector('.site-footer').appendChild(hitokoto);
     })
