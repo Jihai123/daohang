@@ -8,32 +8,35 @@
 <meta name="description" itemprop="description" content="一个专注于ChatGPT资源和导航的网站。" />
 <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0;" name="viewport" />
 <title>ChatGPT 导航网站</title>
-<link rel="stylesheet" href="css/bootstrap.min.css">
-<link rel="stylesheet" href="css/font-awesome.min.css">
-<link rel="stylesheet" href="css/animate.css">
-<link rel="stylesheet" href="css/templatemo_style.css">
-<link rel="shortcut icon" type="image/x-icon" href="https://www.example.com/logo.png" media="screen" />
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
 
 <script src="https://cdn.jsdelivr.net/npm/bluebird@3/js/browser/bluebird.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/whatwg-fetch@2.0.3/fetch.min.js"></script>
-<script src="https://cdn.staticfile.org/jquery/2.1.1/jquery.min.js"></script>
-<script src="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
 
 <style>
     body, html {
         height: 100%;
         margin: 0;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     }
     .site-footer {
         display: flex;
         flex-direction: column;
         align-items: center;
         justify-content: center;
-        height: 100vh; /* 使footer占满整个视窗高度 */
+        height: 100vh; 
+        background: #f7f7f7;
+        padding: 20px;
+        text-align: center;
     }
     .social {
         list-style: none;
         padding: 0;
+        margin: 0 0 20px;
         display: flex;
         gap: 20px;
     }
@@ -42,21 +45,34 @@
     }
     .social a {
         text-decoration: none;
-        color: inherit;
-        background-color: #C0C0C0; /* 金属银色 */
-        padding: 10px 20px; /* 添加按钮的填充 */
-        border-radius: 5px; /* 增加圆角，如果需要的话 */
+        color: white; 
+        background: linear-gradient(145deg, #e6e6e6, #ccc); 
+        padding: 10px 20px; 
+        border-radius: 5px;
+        box-shadow: 4px 4px 8px #aaa, -4px -4px 8px #fff; 
+        transition: all 0.3s ease; 
+        font-size: 18px;
+        font-weight: 600;
     }
     .social a:hover {
-        background-color: #A9A9A9; /* 提供悬停效果 */
+        background: linear-gradient(145deg, #ccc, #e6e6e6); 
+        box-shadow: 2px 2px 4px #aaa, -2px -2px 4px #fff; 
     }
     .main-footer, .copyright {
-        border: none; /* 去掉那两条线 */
+        border: none;
+    }
+    .copyright p {
+        margin: 0;
+        font-size: 14px;
+        color: #666;
+    }
+    h4 {
+        margin: 0;
     }
 </style>
 </head>
 <body oncontextmenu="return false" onselectstart="return false" ondragstart="return false">
-<footer class="site-footer container text-center">
+<footer class="site-footer">
     <div class="main-footer">
         <ul class="social">
             <li><a href="https://www.chatgpt4x.cn"><h4>ChatGPT对话</h4></a></li>
@@ -75,8 +91,12 @@
       return res.json();
     })
     .then(function (data) {
-      var hitokoto = document.getElementById('hitokoto');
+      var hitokoto = document.createElement('p');
       hitokoto.innerText = data.hitokoto;
+      hitokoto.style.color = '#999';
+      hitokoto.style.fontSize = '14px';
+      hitokoto.style.marginTop = '20px';
+      document.querySelector('.site-footer').appendChild(hitokoto);
     })
     .catch(function (err) {
       console.error(err);
