@@ -18,24 +18,48 @@
 <script src="https://cdn.jsdelivr.net/npm/whatwg-fetch@2.0.3/fetch.min.js"></script>
 <script src="https://cdn.staticfile.org/jquery/2.1.1/jquery.min.js"></script>
 <script src="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+<style>
+    body, html {
+        height: 100%;
+        margin: 0;
+    }
+    .site-footer {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 100vh; /* 使footer占满整个视窗高度 */
+    }
+    .social {
+        list-style: none;
+        padding: 0;
+        display: flex;
+        gap: 20px;
+    }
+    .social li {
+        display: inline;
+    }
+    .social a {
+        text-decoration: none;
+        color: inherit;
+    }
+    .main-footer, .copyright {
+        border: none; /* 去掉那两条线 */
+    }
+</style>
 </head>
 <body oncontextmenu="return false" onselectstart="return false" ondragstart="return false">
 <footer class="site-footer container text-center">
-    <div class="row">
-        <div class="col-md-12">
-            <div class="main-footer">
-                <ul class="social">
-                    <li><a href="https://www.chatgpt4x.cn"> <h4>ChatGPT对话</h4></a></li>
-                    <li><a href="https://www.citrons.cn/"><h4>ChatGPT画图</h4></a></li>
-                    <li><a href="https://weibo.com/u/6620261949"><h4>ChatGPT文档分析</h4></a></li>
-                </ul>
-            </div>
-        </div>
+    <div class="main-footer">
+        <ul class="social">
+            <li><a href="https://www.chatgpt4x.cn"><h4>ChatGPT对话</h4></a></li>
+            <li><a href="https://www.citrons.cn/"><h4>ChatGPT画图</h4></a></li>
+            <li><a href="https://weibo.com/u/6620261949"><h4>ChatGPT文档分析</h4></a></li>
+        </ul>
     </div>
-    <div class="row">
-        <div class="col-md-12 copyright">
-            <p>Copyright &copy; 2019&nbsp;&nbsp;Company&nbsp;&nbsp;<a href="https://www.chatgpt5x.com">xxxx</a></p>
-        </div>
+    <div class="copyright">
+        <p>Copyright &copy; 2019&nbsp;&nbsp;Company&nbsp;&nbsp;<a href="https://www.chatgpt5x.com">xxxx</a></p>
     </div>
 </footer>
 
