@@ -19,6 +19,11 @@
     clear: both;
 }
 
+.box {  
+  width: 33%;   
+  margin: 0 auto;  
+}
+
 .blue {
 	color: #3CF;
 }
