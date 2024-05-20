@@ -19,9 +19,10 @@
     clear: both;
 }
 
-.box {  
-  width: 33%;   
-  margin: 0 auto;  
+.button-container {
+    display: flex;
+    justify-content: space-around; /* 水平方向均匀分布 */
+    margin-top: 50px; /* 可根据需要调整上边距 */
 }
 
 .blue {
