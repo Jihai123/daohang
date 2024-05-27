@@ -1,10 +1,4 @@
-/*
-  Author：Citrons@柠檬草
-  Website：https://www.citrons.cn/
-  E-mail:909229731@qq.com/citronsblog@gmail.com
-  QQ:909229731
-  Time:2019/02/01 16:12
-*/
+
 .overlay h4 {
     position: relative;
     top: 50%;
@@ -193,7 +187,7 @@ ul.main-menu li a.active {
 }
 
 .home-intro {
-    margin-bottom: 20px;
+    margin-bottom: 10px;
 }
 
 .home-intro p {
